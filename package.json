@@ -1,0 +1,24 @@
+{
+  "name": "favpics",
+  "productName": "FavPics",
+  "version": "1.0.0",
+  "description": "small app to like your pictures and send them to the folder of your choice",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielshufelt/favpics.git"
+  },
+  "author": "gabrielshufelt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielshufelt/favpics/issues"
+  },
+  "homepage": "https://github.com/gabrielshufelt/favpics#readme",
+  "dependencies": {
+    "electron": "^27.1.3",
+    "toastify-js": "^1.12.0"
+  }
+}
