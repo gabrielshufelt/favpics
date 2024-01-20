@@ -39,6 +39,7 @@ body {
   display: grid;
   height: 85px;
   justify-items: center;
+  justify-content: space-between;
   border-radius: 10px;
   margin: 10px;
 }
@@ -49,7 +50,7 @@ body {
 
 .column2 {
   grid-column: 2 / span 1;
-  background-color: #ADD8E6; /* Light Blue */
+  background-color: #ADD8E6; /* CTE */
 }
 
 .folder {
