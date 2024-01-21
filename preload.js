@@ -1,3 +1,18 @@
+const { contextBridge, ipcRenderer } = require('electron');
+
+contextBridge.exposeInMainWorld('electronAPI', {
+    requestPictureFiles: (directoryPath) => {
+        return new Promise((resolve, reject) => {
+            ipcRenderer.once('picture-files', (event, pictureFiles) => {
+                resolve(pictureFiles);
+            });
+
+            ipcRenderer.send('request-picture-files', directoryPath);
+        });
+    },
+});
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const replaceText = (selector, text) => {
       const element = document.getElementById(selector)
