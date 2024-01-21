@@ -8,7 +8,10 @@ function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: 'FavPics',
         width: isDev ? 1000: 500,
-        height: 500
+        height: 500,
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
+        }
     });
 
     // Open devtools if in dev env
