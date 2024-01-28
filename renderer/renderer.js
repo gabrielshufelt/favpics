@@ -6,6 +6,11 @@ document.getElementById('folderInput').addEventListener('change', async function
     // Use the exposed function to request picture files
     const pictureFiles = await window.electronAPI.requestPictureFiles(path);
     
+    // clear previous pictures
+    document.getElementById('column2').innerHTML = '';
+    document.getElementById('column3').innerHTML = '';
+    document.getElementById('column4').innerHTML = '';
+
     for (let i=0; i<pictureFiles.length; i++) {
         let img = document.createElement('img');
         img.src = path+'\\'+pictureFiles[i];

@@ -45,12 +45,7 @@ body {
 }
 
 .search:hover, .liked:hover, .folder:hover {
-  background-color: #bf5c00;
-}
-
-.column2 {
-  grid-column: 2 / span 1;
-  background-color: #ADD8E6;
+  background-color: rgb(191, 92, 0);
 }
 
 .folder {
@@ -70,22 +65,29 @@ body {
 .folderIcon {
   grid-column: 2 / span 1;
   opacity: 0;
+  height: 85px;
 }
 
 .folderPath, .folderIcon {
   background-color: #272727;
   border-radius: 10px;
-  height: 85px;
+}
+
+.column2 {
+  grid-column: 2 / span 1;
 }
 
 .column3 {
   grid-column: 3 / span 1;
-  background-color: #98FB98; /* Pale Green */
 }
 
 .column4 {
   grid-column: 4 / span 1;
-  background-color: #FFD700; /* Gold */
+}
+
+.column2, .column3, .column4 {
+  margin-top: 15px;
+  text-align: center;
 }
 
 .row1 {
@@ -108,7 +110,13 @@ body {
 }
 
 .imgs {
-  max-width: 100%;
+  margin-top: 15px;
+  max-width: 85%;
+  border-radius: 5%;
+  transition: all 0.7s ease;
 }
 
-
+.imgs:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(191, 92, 0, 0.7);
+}
