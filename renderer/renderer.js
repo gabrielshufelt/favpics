@@ -5,6 +5,17 @@ document.getElementById('folderInput').addEventListener('change', async function
 
     // Use the exposed function to request picture files
     const pictureFiles = await window.electronAPI.requestPictureFiles(path);
+    
+    for (let i=0; i<pictureFiles.length; i++) {
+        let img = document.createElement('img');
+        img.src = path+'\\'+pictureFiles[i];
+        img.className = "imgs";
+        switch (i % 3) {
+            case 0: document.getElementById('column2').appendChild(img); break;
+            case 1: document.getElementById('column3').appendChild(img); break;
+            case 2: document.getElementById('column4').appendChild(img); break;
+        }
+    }
 
     // Continue with displaying pictures in the renderer process
     loadAndDisplayPictures(pictureFiles);
