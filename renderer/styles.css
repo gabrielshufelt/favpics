@@ -16,6 +16,13 @@ body {
   justify-items: start;
 }
 
+.pictures-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  width: 100%;
+}
+
 .search, .liked {
   grid-column: 1 / span 1;
   background-color: #272727;
@@ -119,4 +126,5 @@ body {
 .imgs:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(191, 92, 0, 0.7);
+  cursor: pointer;
 }
